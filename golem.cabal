@@ -1,0 +1,57 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           golem
+version:        0.1.0.0
+license:        GPL
+build-type:     Simple
+
+library
+  exposed-modules:
+      Data
+      Eval
+      Golem
+      LazyProofs
+  other-modules:
+      Paths_golem
+  hs-source-dirs:
+      lib
+  ghc-options: -Wall -fwarn-incomplete-patterns
+  build-depends:
+      HUnit
+    , base
+    , containers
+    , logict
+    , mtl
+    , pretty-show
+    , string-interpolate
+    , transformers
+  default-language: Haskell2010
+
+executable golem
+  main-is: Main.hs
+  other-modules:
+      Questions
+      Blockbuster
+      Example
+      Shop
+      Paths_golem
+  hs-source-dirs:
+      main
+      examples
+      test
+  ghc-options: -main-is Main
+  build-depends:
+      HUnit
+    , base
+    , containers
+    , golem
+    , logict
+    , mtl
+    , pretty-show
+    , string-interpolate
+    , transformers
+  default-language: Haskell2010

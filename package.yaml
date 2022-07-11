@@ -1,0 +1,30 @@
+name:                golem
+version:             0.1.0.0
+license:             GPL
+
+dependencies:
+- base
+- containers
+- logict
+- string-interpolate
+- HUnit
+- mtl
+- transformers
+- pretty-show
+
+
+library:
+  source-dirs: lib
+  ghc-options:
+  - -Wall
+  - -fwarn-incomplete-patterns
+
+executables:
+  golem:
+    source-dirs:
+      - main
+      - examples
+      - test
+    main: Main
+    dependencies:
+      - golem
